@@ -25,20 +25,40 @@ namespace ConsoleApp2masiv
 
             // Задача 2
 
-            int[] array = new int[31];
-            Random random = new Random();
-            for (int i=0; i<array.Length; i++)
+            //int[] array = new int[31];
+            //Random random = new Random();
+            //for (int i=0; i<array.Length; i++)
+            //{
+            //    array[i] = random.Next(5, 60);
+            //    Console.WriteLine($"array [{i}]= {array[i]}");
+            //}
+            //int summ = 0;
+            //for (int i=0; i< array.Length; i++)
+            //{
+            //    summ += array[i];
+            //}
+            //Console.WriteLine($"Общее кол-во осадков = {summ}");
+
+            // Задача 3
+
             {
-                array[i] = random.Next(5, 60);
-                Console.WriteLine($"array [{i}]= {array[i]}");
+             double[] weights = new double[20]
+                Random rnd = new Random(); 
+                for (int i = 0; i < 20; i++)
+                {
+                    weights[i] = rnd.NextDouble() * (100 - 50) + 50;
+                }
+                double averageWeight = 0; 
+                for (int i = 0; i < 20; i++)
+                {
+                    averageWeight += weights[i];
+                }
+                averageWeight /= 20;
+
+                Console.WriteLine("Средний вес: " + averageWeight);
             }
-            int summ = 0;
-            for (int i=0; i< array.Length; i++)
-            {
-                summ += array[i];
-            }
-            Console.WriteLine($"Общее кол-во осадков = {summ}");
-            Console.Read();
+        }
+       
         }   
     }
 }
