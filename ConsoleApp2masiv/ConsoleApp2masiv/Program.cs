@@ -41,24 +41,41 @@ namespace ConsoleApp2masiv
 
             // Задача 3
 
-            {
-             double[] weights = new double[20]
-                Random rnd = new Random(); 
-                for (int i = 0; i < 20; i++)
-                {
-                    weights[i] = rnd.NextDouble() * (100 - 50) + 50;
-                }
-                double averageWeight = 0; 
-                for (int i = 0; i < 20; i++)
-                {
-                    averageWeight += weights[i];
-                }
-                averageWeight /= 20;
+            // double[] weights = new double[20];
+            //Random rnd = new Random(); 
+            //for (int i = 0; i < 20; i++)
+            // {
+            //   weights[i] = rnd.NextDouble() * (100 - 50) + 50;
+            // }
+            //    double averageWeight = 0; 
+            //    for (int i = 0; i < 20; i++)
+            //    {
+            //        averageWeight += weights[i];
+            //    }
+            //    averageWeight /= 20;
 
-                Console.WriteLine("Средний вес: " + averageWeight);
+            //    Console.WriteLine("Средний вес: " + averageWeight);
+
+            //Задача 4
+            int[] arr = new int[] { -37, 0, 50, 46, 34, 46, -4, 13 }; // Создаем массив с явной инициализацией
+
+            int negativeCount = 0; // Количество отрицательных элементов
+
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arra[i] < 0)
+                {
+                    negativeCount++;
+                }
             }
+
+            Console.WriteLine("Количество отрицательных элементов в массиве: " + negativeCount);
         }
-       
+    }
+
+}
+    }
         }   
     }
-}
+
